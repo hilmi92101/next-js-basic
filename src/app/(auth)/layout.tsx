@@ -4,6 +4,7 @@ import '../globals.css';
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useState } from 'react'
 
 const navLinks = [
     { name: "Register", href: "/register" },
@@ -23,30 +24,34 @@ export default function RootLayout({
 }) {
 
     const pathname = usePathname();
-
+    const [input, setInput] = useState('');
 
     return (
         <html lang="en">
             <body>
                 <header style={headerStyle}>HEADER</header>
 
+                <h1>State is preserved in layout.tsx</h1>
+                <input type="text" value={input} onChange={(e) => setInput(e.target.value)} />
+                <br />
+
                 <div>
                     {navLinks.map((link, index) => (
-                        
-                        
+
+
                         <div key={index}>
-                            <Link 
+                            <Link
                                 className={pathname.startsWith(link.href) ? 'text-green-500 font-bold mr-4' : 'text-blue-500 mr-4'}
                                 href={link.href}
                             >
                                 <h1>{link.name}</h1>
                             </Link>
-                            <br />
                         </div>
                     ))}
                 </div>
 
                 {children}
+
                 <footer style={footerStyle}>FOOTER</footer>
 
             </body>
