@@ -5,6 +5,7 @@ import { useState } from 'react'
 const page = () => {
 
     const [name, setName] = useState({ firstName: '', lastName: '' })
+    
     return (
         <>  
             <h1>Example 3: eState with object</h1>
