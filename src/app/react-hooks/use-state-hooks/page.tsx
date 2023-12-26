@@ -8,6 +8,7 @@ const page = () => {
 
     return (
         <>
+            <h1>Example 1</h1>
             <button onClick={ () => setCount(count + 1) }>Count { count}</button>
         </>
     )
