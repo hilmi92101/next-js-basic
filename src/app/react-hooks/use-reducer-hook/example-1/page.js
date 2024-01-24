@@ -2,9 +2,7 @@
 
 import { useReducer } from 'react'
 
-const Page = () => {
-
-    const initialState = 0
+const initialState = 0
     const reducer = (state, action) => {
         switch (action) {
             case 'increment':
@@ -17,6 +15,8 @@ const Page = () => {
                 return state
         }
     }
+
+const Page = () => {
 
     const [count, dispatch] = useReducer(reducer, initialState);
 
