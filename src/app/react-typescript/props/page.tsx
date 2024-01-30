@@ -5,8 +5,9 @@ import { Person, PersonV2 } from './Components/Person';
 import { PersonList, PersonListV2 } from './Components/PersonList';
 import { Status } from './Components/Status';
 import { Heading, HeadingV2 } from './Components/Heading';
-import { Oscar, OscargV2 } from './Components/Oscar';
-import { ButtonV1 } from './Components/Button';
+import { Oscar, OscarV2 } from './Components/Oscar';
+import { ButtonV1, ButtonV2, ButtonV3, ButtonV4 } from './Components/Button';
+import { InputV1, InputV2 } from './Components/Input';
 
 const page = () => {
 
@@ -61,7 +62,13 @@ const page = () => {
             <Oscar><Heading>Placeholder text 3</Heading></Oscar>
             <Oscar><Heading>Placeholder text 4</Heading></Oscar>
 
+            {/* EVENT PROPS */}
             <ButtonV1 handleClick={() => { console.log('Button Clicked') }} />
+            <ButtonV2 handleClick={(event) => { console.log('Button Clicked', event) }} />
+            <ButtonV3 handleClick={(event, id) => { console.log('Button Clicked', event) }} />
+            <ButtonV4 id={5} handleClick={(event, id) => { console.log('Button Clicked', event, id) }} />
+            <InputV1 value='' handleChange={event => console.log(event)} />
+            <InputV2 value='' handleChange={event => console.log(event)} />
 
             
         </>
