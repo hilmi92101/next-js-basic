@@ -8,6 +8,7 @@ import { Heading, HeadingV2 } from './Components/Heading';
 import { Oscar, OscarV2 } from './Components/Oscar';
 import { ButtonV1, ButtonV2, ButtonV3, ButtonV4 } from './Components/Button';
 import { InputV1, InputV2 } from './Components/Input';
+import { ContainerV1 } from './Components/Container';
 
 const page = () => {
 
@@ -70,7 +71,8 @@ const page = () => {
             <InputV1 value='' handleChange={event => console.log(event)} />
             <InputV2 value='' handleChange={event => console.log(event)} />
 
-            
+            {/* STYLE PROPS */}
+            <ContainerV1 styles={{ border: '1px solid red', padding: '1rem' }} />
         </>
 
 
